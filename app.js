@@ -1,8 +1,8 @@
 let numeroSecreto = 0;
 let intentos = 0;
 let listaNumerosSorteados = [];
-let rangoNumeros = 10;
-let rondasMaxima = 3;
+const rangoNumeros = 10;
+const rondasMaxima = 3;
 
 function asignarTextoElemento(elemento, texto){
     let elementosHTML = document.querySelector(elemento);
@@ -15,8 +15,6 @@ function limpiarCaja() {
  
 function generarNumeroSecreto(){
     numeroSecreto = Math.floor(Math.random()*rangoNumeros) + 1;
-    console.log(numeroSecreto);
-    console.log(listaNumerosSorteados);
     if (listaNumerosSorteados.length == rondasMaxima){
         asignarTextoElemento('p', 'Se termino el juego');
     } else {
